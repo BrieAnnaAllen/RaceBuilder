@@ -14,7 +14,7 @@
             "adulthood": 100,
             "max": 750
           },
-          "size"{
+          "size":{
             "desc": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
             "size-type": "medium"
           },
