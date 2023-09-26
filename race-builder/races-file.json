@@ -1,14 +1,57 @@
 [
     {
       "id": 1,
-      "name": "high elf",
-      "traits": {
-        "Darkvision": "",
-        "Keen Senses": "",
-        "Fey Ancestry": "",
-        "Trance": "",
-        "Ability Score Increase": "",
-        "Elf Weapon Training":""
+      "name": "elf",
+      "subrace": { 
+        "high elf": {
+          "ability score": {
+            "desc": "Your Dexterity score increases by 2. Your Intelligence score increases by 1.",
+            "dex": 2,
+            "int": 1
+          },
+          "age": {
+            "desc": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+            "adulthood": 100,
+            "max": 750
+          },
+          "size"{
+            "desc": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+            "size-type": "medium"
+          },
+        
+          "speed":
+          {
+            "desc": "Your base walking speed is 30 feet.",
+            "val": 30
+          },
+          "language":{
+            "desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires. You can speak, read, and write one extra language of your choice."
+
+          },
+          
+          "traits": {
+            "elf weapon training":{
+              "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+            }
+
+          }
+
+        },
+        "wood elf": {
+
+        },
+        "eladrin elf": {
+
+        },
+        "dark elf": {
+          
+        }
       }
+      
+    },
+    {
+      "id": 2,
+      "name": "dragonborn"
     }
+    
 ]
