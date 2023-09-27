@@ -12,7 +12,7 @@ class App extends Component{
   }
 
   componentDidMount() {
-    fetch('https://raw.githubusercontent.com/BrieAnnaAllen/RaceBuilder/main/race-builder/races-file.json?token=GHSAT0AAAAAACIDVLOEFI3OEAISB6PTYFMCZITLKDA')
+    fetch('https://raw.githubusercontent.com/BrieAnnaAllen/RaceBuilder/main/race-builder/races-file.json')
     .then((response) => response.json())
     .then((race) =>
     this.setState(
@@ -30,7 +30,7 @@ class App extends Component{
           return (
             <div>
               <h1>{race.name}</h1>
-              <h2>I'm here</h2>
+              <h2>{race.subrace}</h2>
             </div>
           )
         })}
