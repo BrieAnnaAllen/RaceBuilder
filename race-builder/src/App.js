@@ -24,13 +24,16 @@ class App extends Component{
 
 
   render () {
+    {this.state.races.map((race) => {
+      console.log(race);
+    })}
     return(
       <div>
         {this.state.races.map((race) => {
           return (
             <div>
-              <h1>{race.name}</h1>
-              <h2>{race.subrace}</h2>
+              <h1 key={race.id}>{race.name}</h1>
+             
             </div>
           )
         })}
