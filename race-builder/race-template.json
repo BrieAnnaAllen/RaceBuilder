@@ -1,0 +1,45 @@
+[
+    {
+        "id": 2,
+        "name": "dragonborn",
+        "age": {
+        "val": 2,
+        "desc": ""
+        },
+        "size": {
+          "val": " ",
+          "desc": " "
+        },
+        "speed": {
+          "val": 1,
+          "desc": " "
+        },
+        "ability score": {
+          "desc": " ",
+          "str": {
+            "val": -1
+          },
+          "dex": {
+            "val": -1
+          },
+          "con": {
+            "val": -1
+          },
+          "wis": {
+            "val": -1
+          },
+          "cha": {
+            "val": -1
+          }
+        },
+        "languages": {
+          "desc": " ",
+          "common": true
+        },
+        "traits": {
+          "trait name": {
+            "desc": " "
+          }
+        }
+      }
+]
