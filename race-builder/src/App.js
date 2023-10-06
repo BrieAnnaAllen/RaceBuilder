@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Component} from 'react';
 import React, {createRef, useRef} from 'react'
-import { CompareAge } from './compareAge/compare-age';
+import CompareAge from './compareAge/compare-age';
 
 class App extends Component{
   constructor(){
@@ -11,10 +11,12 @@ class App extends Component{
     this.state = {
       races: [],
       choice1: " ",
-      choice2: " "
+      choice2: " ",
+      agecomponenet: <CompareAge></CompareAge>
     };
 
     this.onChangeSaveSelect = this.onChangeSaveSelect.bind(this);
+    this.onClickUpdateRaces = this.onClickUpdateRaces.bind(this);
   }
 
   componentDidMount() {
@@ -28,8 +30,8 @@ class App extends Component{
     ))
   }
 
-onClickUpdateRaces(){
-  return(<CompareAge races={this.races}/>)
+onClickUpdateRaces(e){
+  console.log('delivery');
 }
 
 onChangeSaveSelect(e){
