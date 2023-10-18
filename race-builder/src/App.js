@@ -3,6 +3,7 @@ import './App.css';
 import {Component} from 'react';
 import React, {createRef, useRef} from 'react'
 import CompareAge from './compareAge/compare-age';
+import {Routes, Route, Outlet} from 'react-router-dom';
 
 class App extends Component{
   constructor(){
@@ -58,6 +59,7 @@ return tempMap;
   
     return(
       <div>
+        
         <select name="race1" id="race1" onChange={this.onChangeSaveSelect} >
           {this.racesSelectPopulation()}
         </select>
@@ -65,6 +67,13 @@ return tempMap;
         {this.racesSelectPopulation()}
         </select>
         <button onClick={this.onClickUpdateRaces}>Submit</button>
+
+        <Routes>
+          <Route path='/'>
+            
+          </Route>
+        </Routes>
+
         {/* {this.state.races.map((race) => {
           return (
             <div>
