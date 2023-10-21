@@ -4,6 +4,7 @@ import {Component} from 'react';
 import React, {createRef, useRef} from 'react'
 import CompareAge from './compareAge/compare-age';
 import {Routes, Route, Outlet} from 'react-router-dom';
+import SelectPage from './routes/select-page/select-page.component';
 
 class App extends Component{
   constructor(){
@@ -12,11 +13,10 @@ class App extends Component{
     this.state = {
       races: [],
       choice1: " ",
-      choice2: " ",
-      agecomponenet: <CompareAge></CompareAge>
+      choice2: " "
     };
 
-    this.onChangeSaveSelect = this.onChangeSaveSelect.bind(this);
+    // this.onChangeSaveSelect = this.onChangeSaveSelect.bind(this);
     this.onClickUpdateRaces = this.onClickUpdateRaces.bind(this);
   }
 
@@ -35,55 +35,31 @@ onClickUpdateRaces(e){
   console.log('delivery');
 }
 
-onChangeSaveSelect(e){
-  if(e.target.id = "race1"){
-    this.setState({ choice1: e.target.value});
+
+ onChangeSaveSelect = (e) =>{
+  if(e.target.id == "race1"){
+    this.setState({ choice1: e.target.value });
+    
   }
   else{
     this.setState({ choice2: e.target.value});
   }
-  
+
 }
 
-racesSelectPopulation(){
-const tempMap = this.state.races.map((race) => {
- return <option key={race.id}value={race.name.toLowerCase()}>{race.name}</option>
-  })
-const defaultEl = <option key={0} value="default">Please select</option>;
-tempMap.unshift(defaultEl);
-return tempMap;
-  
-}
+
 
   render () {
   
     return(
-      <div>
-        
-        <select name="race1" id="race1" onChange={this.onChangeSaveSelect} >
-          {this.racesSelectPopulation()}
-        </select>
-        <select name="race2" id="race2" onChange={this.onChangeSaveSelect}>
-        {this.racesSelectPopulation()}
-        </select>
-        <button onClick={this.onClickUpdateRaces}>Submit</button>
+      
 
         <Routes>
-          <Route path='/'>
-            
-          </Route>
+          <Route path='/' element={<SelectPage races={this.state.races} onChangeSaveSelect={this.onChangeSaveSelect}/>}/>
+          <Route path='age' element={<CompareAge races={this.state.races} choice1={this.state.choice1} choice2={this.state.choice2}></CompareAge>}/>
         </Routes>
 
-        {/* {this.state.races.map((race) => {
-          return (
-            <div>
-              <select key={race.id}>{race.name}</button>
-             <button></button>
-            </div>
-          )
-        })} */}
-
-      </div>
+   
     )
   }
 }
