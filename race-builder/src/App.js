@@ -1,68 +1,75 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {Component} from 'react';
-import React, {createRef, useRef} from 'react'
-import CompareAge from './compareAge/compare-age';
 import {Routes, Route, Outlet} from 'react-router-dom';
+import { useContext } from 'react';
+import { RacesContext } from './contexts/all-races.context';
 import SelectPage from './routes/select-page/select-page.component';
+import CompareAge from './compareAge/compare-age.component';
+import CompareSize from './compareSize/compare-size.component';
+import CompareSpeed from './compareSpeed/compare-speed.component';
+import CompareAbility from './compareAbilityScore/compare-ability-score.component';
+import CompareLanguage from './compareLanguage/compare-language.component';
+import CompareTraits from './compareTraits/compare-traits.component';
 
-class App extends Component{
-  constructor(){
-    super();
 
-    this.state = {
-      races: [],
-      choice1: " ",
-      choice2: " "
-    };
 
-    // this.onChangeSaveSelect = this.onChangeSaveSelect.bind(this);
-    this.onClickUpdateRaces = this.onClickUpdateRaces.bind(this);
-  }
+const App = () => {
+  const {races} = useContext(RacesContext);
 
-  componentDidMount() {
-    fetch('https://raw.githubusercontent.com/BrieAnnaAllen/RaceBuilder/main/race-builder/races-file.json')
-    .then((response) => response.json())
-    .then((race) =>
-    this.setState(
-      () => {
-        return {races: race};
-      }
-    ))
-  }
+  return (
+    <Routes>
+      <Route index element={<SelectPage/>}></Route>
+      <Route path="/age" element={<CompareAge/>}></Route>
+      <Route path="/size" element={<CompareSize/>}></Route>
+      <Route path="/speed" element={<CompareSpeed/>}></Route>
+      <Route path="/languages" element={<CompareLanguage/>}></Route>
+      <Route path="/ability" element={<CompareAbility/>}></Route>
+      <Route path="/traits" element={<CompareTraits/>}></Route>
+    </Routes>
+  )
 
-onClickUpdateRaces(e){
-  console.log('delivery');
 }
+// class App extends Component{
+//   constructor(){
+//     super();
 
 
- onChangeSaveSelect = (e) =>{
-  if(e.target.id == "race1"){
-    this.setState({ choice1: e.target.value });
+//     // this.onChangeSaveSelect = this.onChangeSaveSelect.bind(this);
+//     this.onClickUpdateRaces = this.onClickUpdateRaces.bind(this);
+//   }
+
+//   componentDidMount() {
+//     fetch('https://raw.githubusercontent.com/BrieAnnaAllen/RaceBuilder/main/race-builder/races-file.json')
+//     .then((response) => response.json())
+//     .then((race) =>
+//     this.setState(
+//       () => {
+//         return {races: race};
+//       }
+//     ))
+//   }
+
+// onClickUpdateRaces(e){
+//   console.log('delivery');
+// }
+
+
+//  onChangeSaveSelect = (e) =>{
+//   if(e.target.id == "race1"){
+//     this.setState({ choice1: e.target.value });
     
-  }
-  else{
-    this.setState({ choice2: e.target.value});
-  }
+//   }
+//   else{
+//     this.setState({ choice2: e.target.value});
+//   }
 
-}
+// }
 
 
 
-  render () {
-  
-    return(
-      
+ 
 
-        <Routes>
-          <Route path='/' element={<SelectPage races={this.state.races} onChangeSaveSelect={this.onChangeSaveSelect}/>}/>
-          <Route path='age' element={<CompareAge races={this.state.races} choice1={this.state.choice1} choice2={this.state.choice2}></CompareAge>}/>
-        </Routes>
-
-   
-    )
-  }
-}
 
 
 export default App;

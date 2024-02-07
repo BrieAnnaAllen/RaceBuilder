@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import { RacesProvider } from './contexts/all-races.context';
+import { CustomProvider } from './contexts/custom-race.context';
 
 
 
@@ -13,7 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <RacesProvider>
+      <CustomProvider>
     <App/>
+    </CustomProvider>
     </RacesProvider>
     </BrowserRouter>
   </React.StrictMode>
