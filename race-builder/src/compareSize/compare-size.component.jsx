@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CompareSize = () => {
 
-    const {race1, race2, addToCustomRace} = useContext(CustomContext);
+    const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
 
     const addToCustomRaceHandler = (k, v) => addToCustomRace(k, v);
     const onClickSizeChoice1 = () => sizeHandler(race1);
@@ -12,6 +12,7 @@ const CompareSize = () => {
   
     const sizeHandler = (race) => {
         addToCustomRaceHandler('size', race.size);
+        updateBalance(parseFloat(race.size.bal));
     }
    
     

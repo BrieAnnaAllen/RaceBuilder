@@ -3,13 +3,14 @@ import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
 
 const CompareAbility = () => {
-    const {race1, race2, addToCustomRace} = useContext(CustomContext);
+    const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
     const addCustomRaceHandler = (k,v) => addToCustomRace(k, v);
     const onClickAbilityChoice1 = () => abilityHandler(race1);
     const onClickAbilityChoice2 = () => abilityHandler(race2);
 
     const abilityHandler = (race) => {
         addCustomRaceHandler("ability score", race["ability score"]);
+        updateBalance(parseFloat(race["ability score"].bal));
     }
 
     return(

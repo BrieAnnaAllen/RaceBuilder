@@ -4,8 +4,18 @@ import { CustomContext } from "../contexts/custom-race.context";
 
 
 const CompareTraits = () => {
-    const {customRace, race1, race2} = useContext(CustomContext);
+    const {customRace, race1, race2, balance, updateBalance} = useContext(CustomContext);
     console.log(customRace);
+
+    const traitBalanceCalculator = () => {
+       const traitsT =  Object.keys(race1.traits);
+       const test  = traitsT.map((trait) => {
+        //updateBalance(parseFloat(race1.traits[trait].bal));
+       });
+    }
+
+    traitBalanceCalculator();
+
 
     return(
         <div>
@@ -20,6 +30,8 @@ const CompareTraits = () => {
             <p>{customRace.speed.desc}</p>
             <h2>Languages</h2>
             <p>{customRace.languages.desc}</p>
+            <h1>Balance Score</h1>
+            <p>{balance}</p>
         </div>
         
        

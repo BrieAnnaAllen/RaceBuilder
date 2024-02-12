@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CustomContext } from "../contexts/custom-race.context";
 
 const CompareLanguage = () => {
-    const {race1, race2, addToCustomRace} = useContext(CustomContext);
+    const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
 
     const addToCustomRaceHandler = (k, v) => addToCustomRace(k, v);
     const onClickLanguageChoice1 = () => languageHandler(race1);
@@ -11,6 +11,7 @@ const CompareLanguage = () => {
   
     const languageHandler = (race) => {
         addToCustomRaceHandler('languages', race.languages);
+        updateBalance(parseFloat(race.languages.bal));
     }
    
 

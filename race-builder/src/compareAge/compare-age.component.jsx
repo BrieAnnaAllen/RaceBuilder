@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const CompareAge= () => {
-    const {race1, race2, addToCustomRace} = useContext(CustomContext);
+    const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
 
     const addToCustomRaceHandler = (k, v) => addToCustomRace(k, v);
     const onClickAgeChoice1 = () => ageHandler(race1);
@@ -12,7 +12,7 @@ const CompareAge= () => {
   
     const ageHandler = (race) => {
         addToCustomRaceHandler('age', race.age);
-        console.log("hi");
+        updateBalance(parseFloat(race.age.bal));
     }
    
     

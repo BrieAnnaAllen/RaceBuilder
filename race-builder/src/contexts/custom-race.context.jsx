@@ -3,7 +3,8 @@ import { createContext, useState} from "react";
 export const CustomContext = createContext({
     race1: {},
     race2: {},
-    customRace: {}
+    customRace: {},
+    balance: 0,
 });
 
 
@@ -12,6 +13,9 @@ export const CustomProvider = ({children}) => {
     const [race1, setRace1] = useState({});
     const [race2, setRace2] = useState({});
     const [customRace, setCustomRace] = useState({});
+    const [balance, setBalance] = useState(0);
+
+    const balanceMax = 6;
 
     const SetRaces = (r1, r2) => {
         console.log(r2);
@@ -28,7 +32,11 @@ export const CustomProvider = ({children}) => {
             console.log(val);
     }
 
-    const value = {race1, race2, customRace, SetRaces, addToCustomRace};
+    const updateBalance = (bal) => {
+        setBalance(balance + bal);
+        console.log(balance);
+    }
+    const value = {race1, race2, customRace, SetRaces, addToCustomRace, balanceMax, balance, updateBalance};
 
     return <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
 }
