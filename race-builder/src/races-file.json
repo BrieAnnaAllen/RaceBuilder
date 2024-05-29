@@ -1,6 +1,7 @@
+// https://docs.google.com/spreadsheets/d/1vq1kz6PRAbw5LHy6amH-bNb4OuB8DBXL1RsZROt03Sc/edit#gid=872807765
+//Can be between 17 and 33.  Low:  17 - 22, Average: 23 - 27, High: 28 - 33.  Cant exceed 33 and cant be less than 17
 [
   {
-    "id": 1,
     "super": "dwarves",
     "name": "hill dwarf",
     "age": {
@@ -16,7 +17,7 @@
     "speed": {
       "val": 25,
       "desc": "Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.",
-      "bal": "0"
+      "bal": "-2"
     },
     "ability score": {
       "desc": "Your Constitution score increases by 2. Your Wisdom score increases by 1.",
@@ -26,7 +27,7 @@
       "int": 0,
       "wis": 1,
       "cha": 0,
-      "bal": "3"
+      "bal": "12"
     },
     "languages": {
       "desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
@@ -36,32 +37,31 @@
     "traits": {
       "darkvison": {
         "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "bal": ".5"
+        "bal": "3"
       },
       "dwarven resilience": {
         "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage",
-        "bal": ".5"
+        "bal": "5"
       },
       "dwarven combat training": {
         "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
-        "bal": "0"
+        "bal": "2"
       },
       "tool proficiency": {
         "desc": "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.",
-        "bal": "0"
+        "bal": "1"
       },
       "stonecunning": {
         "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
-        "bal": ".5"
+        "bal": "1"
       },
       "dwarven toughness": { 
         "desc": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level.",
-        "bal": "1.5"
+        "bal": "5"
       }
     }
   },
   {
-    "id": 2,
     "super": "dwarves",
     "name": "mountain dwarf",
     "age": {
@@ -77,7 +77,7 @@
     "speed": {
       "val": 25,
       "desc": "Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.",
-      "bal": "0"
+      "bal": "-2"
     },
     "ability score": {
       "desc": "Your Constitution score increases by 2. Your Strength score increases by 2.",
@@ -87,7 +87,7 @@
       "int": 0,
       "wis": 0,
       "cha": 0,
-      "bal": "3"
+      "bal": "16"
     },
     "languages": {
       "desc": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
@@ -97,32 +97,31 @@
     "traits": {
       "darkvison": {
         "desc": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "bal": ".5"
+        "bal": "3"
       },
       "dwarven resilience": {
         "desc": "You have advantage on saving throws against poison, and you have resistance against poison damage",
-        "bal": ".5"
+        "bal": "5"
       },
       "dwarven combat training": {
         "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
-        "bal": "0"
+        "bal": "2"
       },
       "tool proficiency": {
         "desc": "You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.",
-        "bal": "0"
+        "bal": "1"
       },
       "stonecunning": {
         "desc": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
-        "bal": ".5"
+        "bal": "1"
       },
       "dwarven aromor training": { 
         "desc": "You have proficiency with light and medium armor.",
-        "bal": "1.5"
+        "bal": "4"
       }
     }
   },
   {
-    "id": 3,
     "super": "tieflings",
     "name": "tiefling",
     "age": {
@@ -148,7 +147,7 @@
       "int": 0,
       "wis": 0,
       "cha": 0,
-      "bal": "3"
+      "bal": "10"
     },
     "languages": {
       "desc": "You can speak, read, and write Common and Infernal.",
@@ -158,25 +157,25 @@
     "traits": {
       "darkvision": {
         "desc": "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "bal": ".5"
+        "bal": "3"
       },
       "hellish resistance": {
         "desc": "You have resistance to fire damage.",
-        "bal": ".5"
+        "bal": "4"
       },
       "infernal legacy": {
         "desc": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-        "bal": "1.5"
+        "bal": "6"
       }
     }
   },
   {
-    "id": 4,
     "super": "elves",
     "name": "high elf",
     "age": {
       "val": 750,
-      "desc": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old."
+      "desc": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+      "bal": "0"
     },
     "size": {
       "val": "Medium",
@@ -196,7 +195,7 @@
       "int": 1,
       "wis": 0,
       "cha": 0,
-      "bal": "3"
+      "bal": "12"
     },
     "languages": {
       "desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
@@ -206,32 +205,153 @@
     "traits": {
       "darkvision": {
         "desc": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
-        "bal": ".5"
+        "bal": "3"
       },
       "keen senses": {
         "desc": "You have proficiency in the Perception skill.",
-        "bal": ".5"
+        "bal": "2"
       },
       "fey ancestry": {
         "desc": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
-        "bal": ".5"
+        "bal": "2"
       },
       "trance": {
         "desc": "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
-        "bal": ".5"
+        "bal": "2"
       },
       "elf weapon training": {
         "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
-        "bal": ".5"
+        "bal": "2"
       },
       "cantrip": {
         "desc": "You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.",
-        "bal": ".5"
+        "bal": "3"
       },
       "extra language": {
         "desc": "You can speak, read, and write one extra language of your choice.",
-        "bal": ".5"
+        "bal": "1"
       }
+    }
+    
+  },
+  {
+    "super": "elves",
+    "name": "wood elf",
+    "age": {
+      "val": 750,
+      "desc": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+      "bal": "0"
+    },
+    "size": {
+      "val": "Medium",
+      "desc": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+      "bal": "0"
+    },
+    "speed": {
+      "val": 35,
+      "desc": "Your base walking speed increases to 35 feet.",
+      "bal": "2"
+    },
+    "ability score": {
+      "desc": "Your Dexterity score increases by 2. Your Wisdom score increases by 1.",
+      "str": 0,
+      "dex": 2,
+      "con": 0,
+      "int": 1,
+      "wis": 0,
+      "cha": 0,
+      "bal": "12"
+    },
+    "languages": {
+      "desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+      "known": ["common", "elvish"],
+      "bal": "0"
+    },
+    "traits": {
+      "darkvision": {
+        "desc": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+        "bal": "3"
+      },
+      "keen senses": {
+        "desc": "You have proficiency in the Perception skill.",
+        "bal": "2"
+      },
+      "fey ancestry": {
+        "desc": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+        "bal": "2"
+      },
+      "trance": {
+        "desc": "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
+        "bal": "2"
+      },
+      "elf weapon training": {
+        "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow.",
+        "bal": "2"
+      },
+      "mask of the wild": {
+        "desc": "You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.",
+        "bal": "3"
+      }  
+    }
+  },
+  {
+    "super": "elves",
+    "name": "dark elf (drow)",
+    "age": {
+      "val": 750,
+      "desc": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+      "bal": "0"
+    },
+    "size": {
+      "val": "Medium",
+      "desc": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+      "bal": "0"
+    },
+    "speed": {
+      "val": 30,
+      "desc": "Your base walking speed is 30 feet.",
+      "bal": "0"
+    },
+    "ability score": {
+      "desc": "Your Dexterity score increases by 2. Your Charisma score increases by 1.",
+      "str": 0,
+      "dex": 2,
+      "con": 0,
+      "int": 0,
+      "wis": 0,
+      "cha": 1,
+      "bal": "12"
+    },
+    "languages": {
+      "desc": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+      "known": ["common", "elvish"],
+      "bal": "0"
+    },
+    "traits": {
+      "darkvision": {
+        "desc": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+        "bal": "3"
+      },
+      "keen senses": {
+        "desc": "You have proficiency in the Perception skill.",
+        "bal": "2"
+      },
+      "fey ancestry": {
+        "desc": "You have advantage on saving throws against being charmed, and magic can’t put you to sleep.",
+        "bal": "2"
+      },
+      "trance": {
+        "desc": "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.",
+        "bal": "2"
+      },
+      "drow weapon training": {
+        "desc": "You have proficiency with rapiers, shortswords, and hand crossbows.",
+        "bal": "2"
+      },
+      "drow magic": {
+        "desc": "You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+        "bal": "6"
+      }  
     }
   }
     
