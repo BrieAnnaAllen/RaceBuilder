@@ -15,7 +15,7 @@ export const CustomProvider = ({children}) => {
     const [customRace, setCustomRace] = useState({});
     const [balance, setBalance] = useState(0);
 
-    const balanceMax = 6;
+    const balanceMax = 33;
 
     const SetRaces = (r1, r2) => {
         console.log(r2);

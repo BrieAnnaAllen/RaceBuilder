@@ -12,6 +12,8 @@ import CompareAbility from './compareAbilityScore/compare-ability-score.componen
 import CompareLanguage from './compareLanguage/compare-language.component';
 import CompareTraits from './compareTraits/compare-traits.component';
 
+// https://docs.google.com/spreadsheets/d/1vq1kz6PRAbw5LHy6amH-bNb4OuB8DBXL1RsZROt03Sc/edit#gid=872807765
+//Can be between 17 and 33.  Low:  17 - 22, Average: 23 - 27, High: 28 - 33.  Cant exceed 33 and cant be less than 17
 
 
 const App = () => {
