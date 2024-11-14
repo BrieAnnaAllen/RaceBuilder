@@ -5,6 +5,7 @@ export const CustomContext = createContext({
     race2: {},
     customRace: {},
     balance: 0,
+    raceTraits: {}
 });
 
 
@@ -14,6 +15,7 @@ export const CustomProvider = ({children}) => {
     const [race2, setRace2] = useState({});
     const [customRace, setCustomRace] = useState({});
     const [balance, setBalance] = useState(0);
+    const [raceTraits, setRaceTraits] = useState({});
 
     const balanceMax = 33;
 
@@ -22,6 +24,24 @@ export const CustomProvider = ({children}) => {
         setRace1(...r1);
         setRace2(...r2);
     }
+
+    const updateRaceTraits = (keyTrait, valTrait) => {
+        
+        if(keyTrait in raceTraits){
+            updateBalance(-(parseFloat(raceTraits[keyTrait]["bal"])));
+            delete raceTraits[keyTrait];
+            
+            
+            
+        }
+        else{
+            raceTraits[keyTrait] = valTrait;
+            updateBalance(parseFloat(raceTraits[keyTrait]["bal"]));
+
+        }
+        console.log(raceTraits);
+    }
+
 
     const addToCustomRace = (key, val) => {
         setCustomRace({
@@ -36,7 +56,8 @@ export const CustomProvider = ({children}) => {
         setBalance(balance + bal);
         console.log(balance);
     }
-    const value = {race1, race2, customRace, SetRaces, addToCustomRace, balanceMax, balance, updateBalance};
+
+    const value = {race1, race2, customRace, SetRaces, addToCustomRace, balanceMax, balance, updateBalance, updateRaceTraits, raceTraits};
 
     return <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
 }

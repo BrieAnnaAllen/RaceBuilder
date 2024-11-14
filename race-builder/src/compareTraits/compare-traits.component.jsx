@@ -4,13 +4,16 @@ import { CustomContext } from "../contexts/custom-race.context";
 
 
 const CompareTraits = () => {
-    const {customRace, race1, race2, balance, updateBalance} = useContext(CustomContext);
+    const {customRace, race1, race2, balance, balanceMax, updateBalance, updateRaceTraits, raceTraits} = useContext(CustomContext);
 
    const Traits1 = race1.traits;
    const Traits2 = race2.traits;
+
+
    
     const traitsHandler = (raceTraitsList, raceKey) => {
-      
+     
+        updateRaceTraits(raceKey, raceTraitsList[raceKey]);
 
         
         // addToCustomRaceHandler('speed', race.speed);
@@ -22,12 +25,21 @@ const CompareTraits = () => {
         const traitsT = race.traits;
         const raceKeys = Object.keys(traitsT);
         var Tr = [];
-        console.log(traitsT[raceKeys[0]].desc);
         for(let i = 0; i < raceKeys.length; i++){
-            Tr.push(<button isSelected={false} onClick={() => traitsHandler(traitsT, raceKeys[i])}><h2>{`${raceKeys[i]}`}</h2><p>{`${traitsT[raceKeys[i]].desc}`}</p></button>);
+            Tr.push(<button onClick={() => traitsHandler(traitsT, raceKeys[i])}><h2>{`${raceKeys[i]}`}</h2><p>{`${traitsT[raceKeys[i]].desc}`}</p></button>);
         }
 
         return Tr;
+    }
+
+    const finalizationHandler = () => {
+        console.log(customRace);
+        if(balance > balanceMax){
+            alert("Max balance for Traits is set to " + balanceMax + ".  Please remove some traits to continue.");
+        }
+        else {
+            customRace["traits"] = raceTraits;
+        }
     }
 
   
@@ -69,6 +81,7 @@ const CompareTraits = () => {
             {displayRaceTraits(race1)}
             <h1>Race 2 Traits</h1>
             {displayRaceTraits(race2)}
+            <button onClick={() => finalizationHandler() }>Finalize</button>
         </div>
         
        
