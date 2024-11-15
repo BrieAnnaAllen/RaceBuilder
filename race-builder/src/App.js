@@ -11,6 +11,8 @@ import CompareSpeed from './compareSpeed/compare-speed.component';
 import CompareAbility from './compareAbilityScore/compare-ability-score.component';
 import CompareLanguage from './compareLanguage/compare-language.component';
 import CompareTraits from './compareTraits/compare-traits.component';
+import FinishedCustomRace from './finishedCustomRace/finished-custom-race.component';
+
 
 // https://docs.google.com/spreadsheets/d/1vq1kz6PRAbw5LHy6amH-bNb4OuB8DBXL1RsZROt03Sc/edit#gid=872807765
 //Can be between 17 and 33.  Low:  17 - 22, Average: 23 - 27, High: 28 - 33.  Cant exceed 33 and cant be less than 17
@@ -28,6 +30,7 @@ const App = () => {
       <Route path="/languages" element={<CompareLanguage/>}></Route>
       <Route path="/ability" element={<CompareAbility/>}></Route>
       <Route path="/traits" element={<CompareTraits/>}></Route>
+      <Route path="/finished-custom-race" element={<FinishedCustomRace/>}></Route>
     </Routes>
   )
 

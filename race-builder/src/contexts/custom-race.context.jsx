@@ -5,7 +5,8 @@ export const CustomContext = createContext({
     race2: {},
     customRace: {},
     balance: 0,
-    raceTraits: {}
+    raceTraits: {},
+    finished: false
 });
 
 
@@ -16,6 +17,7 @@ export const CustomProvider = ({children}) => {
     const [customRace, setCustomRace] = useState({});
     const [balance, setBalance] = useState(0);
     const [raceTraits, setRaceTraits] = useState({});
+    const [finished, setFinished] = useState(false);
 
     const balanceMax = 33;
 
@@ -47,7 +49,6 @@ export const CustomProvider = ({children}) => {
         setCustomRace({
             ...customRace, 
             [key]: val});
-            console.log('addtocustomrace worked')
             console.log(key);
             console.log(val);
     }
@@ -57,7 +58,7 @@ export const CustomProvider = ({children}) => {
         console.log(balance);
     }
 
-    const value = {race1, race2, customRace, SetRaces, addToCustomRace, balanceMax, balance, updateBalance, updateRaceTraits, raceTraits};
+    const value = {race1, race2, customRace, SetRaces, addToCustomRace, balanceMax, balance, updateBalance, updateRaceTraits, raceTraits, setFinished, finished};
 
     return <CustomContext.Provider value={value}>{children}</CustomContext.Provider>
 }

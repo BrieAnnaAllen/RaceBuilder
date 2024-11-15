@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { CustomContext } from "../contexts/custom-race.context";
+import { Link } from "react-router-dom";
 
 
 
 const CompareTraits = () => {
-    const {customRace, race1, race2, balance, balanceMax, updateBalance, updateRaceTraits, raceTraits} = useContext(CustomContext);
+    const {customRace, race1, race2, balance, balanceMax, updateBalance, updateRaceTraits, raceTraits, finished, setFinished} = useContext(CustomContext);
 
    const Traits1 = race1.traits;
    const Traits2 = race2.traits;
@@ -20,6 +21,10 @@ const CompareTraits = () => {
         // updateBalance(parseFloat(race.speed.bal));
     }
     
+    const toggleFinished = () => {
+        setFinished(!finished);
+
+    }
    
     const displayRaceTraits = (race) => {
         const traitsT = race.traits;
@@ -38,7 +43,9 @@ const CompareTraits = () => {
             alert("Max balance for Traits is set to " + balanceMax + ".  Please remove some traits to continue.");
         }
         else {
+            toggleFinished();
             customRace["traits"] = raceTraits;
+            console.log("Hello?");
         }
     }
 
@@ -81,7 +88,13 @@ const CompareTraits = () => {
             {displayRaceTraits(race1)}
             <h1>Race 2 Traits</h1>
             {displayRaceTraits(race2)}
-            <button onClick={() => finalizationHandler() }>Finalize</button>
+           { finished ? (
+            <div>
+                <p>Are You Sure?</p>
+                <button><Link to='/finished-custom-race'>Yes</Link></button>
+                <button onClick={() => toggleFinished()}>No</button>
+            </div>
+           ) : ( <button onClick={() => finalizationHandler() }>Finalize</button> ) }
         </div>
         
        
