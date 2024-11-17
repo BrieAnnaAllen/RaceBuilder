@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
 
+import { AgeTitle, AgeChoiceContainer, Or, AgeChoice, AgeLink} from "./compare-age.styles";
+
 
 const CompareAge= () => {
     const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
@@ -18,10 +20,12 @@ const CompareAge= () => {
     
     return(
         <div>
-            <h1>Make Your Choice Of Age Range</h1>
-            <h2 onClick={onClickAgeChoice1}><Link to='/size'>{race1.age.desc}</Link></h2>
-            <p>OR</p>
-            <h2 onClick={onClickAgeChoice2}><Link to='/size'>{race2.age.desc}</Link></h2>
+            <AgeTitle>Make Your Choice Of Age Range</AgeTitle>
+            <AgeChoiceContainer>
+                <AgeChoice onClick={onClickAgeChoice1}><AgeLink to='/size'>{race1.age.desc}</AgeLink></AgeChoice>
+                <Or>OR</Or>
+                <AgeChoice onClick={onClickAgeChoice2}><AgeLink to='/size'>{race2.age.desc}</AgeLink></AgeChoice>
+            </AgeChoiceContainer>
         </div>
     )
 }
