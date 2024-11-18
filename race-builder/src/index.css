@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('../src/images/crinkle-page.jpg');
+  
 }
 
 code {
@@ -16,3 +18,9 @@ code {
   font-family: 'MountainKingRegular';
   src: url('./fonts/MountainKingRegular-woBYn.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Wizzta';
+  src: url('./fonts/wizzta.ttf') format('truetype');
+}
+
+

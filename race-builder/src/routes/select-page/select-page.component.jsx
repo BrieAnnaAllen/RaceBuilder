@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { RacesContext } from '../../contexts/all-races.context';
 import { useRef } from 'react';
 import { CustomContext } from '../../contexts/custom-race.context';
+import { OptGroup, SelectConfig, SelectContainer, Option, SubmitButton} from './select-page.styles';
 
 const ALL_SUPER_RACES = {
   tieflings: 'tieflings',
@@ -46,25 +47,26 @@ const OptionCreation = () => {
     var opt = [];
     races.map((race) => {
       if(superKeys[i] == race.super){
-      opt.push(<option key={race.id}>{race.name}</option>)
+      opt.push(<Option key={race.id}>{race.name}</Option>)
     }});
-    optgr.push(<optgroup label={`${superKeys[i]}`.toUpperCase()}>{opt}</optgroup>)
+    optgr.push(<OptGroup label={`${superKeys[i]}`.toUpperCase()}>{opt}</OptGroup>)
   }
   return optgr;
   // return races.map((race) => <option key={race.id}>{race.name}</option>)
 }
 
   return (
-    <div>
-       <select ref={select1}>
+    <SelectContainer>
+       <SelectConfig ref={select1} size="4">
         {OptionCreation()}
           {/* {races.map((race) => <option key={race.id}>{race.name}</option>)} */}
-        </select>
-        <select  ref={select2}>
+        </SelectConfig>
+        <SubmitButton onClick={onClickChooseRaces}><Link to='/age'>Select</Link></SubmitButton>
+        <SelectConfig  ref={select2}>
         {OptionCreation()}
-        </select>
-        <button onClick={onClickChooseRaces}><Link to='/age'>Select</Link></button>
-    </div>
+        </SelectConfig>
+        
+    </SelectContainer>
   )
 }
 
