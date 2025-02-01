@@ -5,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background: radial-gradient(farthest-corner at 50% 50%, #ccad80 20%,#956a47,#704d36 );
+  background-color: #ccad80;
+  background-attachment: fixed;*/
   background-image: url('../src/images/crinkle-page.jpg');
+  font-size: 1px;
+  height: 100%;
   
 }
 
@@ -23,4 +28,17 @@ code {
   src: url('./fonts/wizzta.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'MainFont3';
+  src: url('./fonts/FantaisieArtistique.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MainFont2';
+  src: url('./fonts/PleaseWriteMeASong-70vV.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MainFont';
+  src: url('./fonts/NewRocker-Regular.ttf') format('truetype');
+}
 

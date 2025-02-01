@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CustomContext } from "../contexts/custom-race.context";
+import { Choice, StyledLink,Title, ChoiceContainer, Or, Background } from "../general-styles.styles";
 
 const CompareLanguage = () => {
     const {race1, race2, addToCustomRace, updateBalance} = useContext(CustomContext);
@@ -17,11 +18,14 @@ const CompareLanguage = () => {
 
 
     return(
-        <div>
-            <h1>Choose Your Language</h1>
-            <h2 onClick={onClickLanguageChoice1}><Link to='/ability'>{race1.languages.desc}</Link></h2>
-            <h2 onClick={onClickLanguageChoice2}><Link to='/ability'>{race2.languages.desc}</Link></h2>
-        </div>
+        <Background>
+            <Title>Choose Your Language Trait</Title>
+            <ChoiceContainer>
+                <Choice onClick={onClickLanguageChoice1}><StyledLink to='/ability'>{race1.languages.desc}</StyledLink></Choice>
+                <Or>OR</Or>
+                <Choice onClick={onClickLanguageChoice2}><StyledLink to='/ability'>{race2.languages.desc}</StyledLink></Choice>
+            </ChoiceContainer>
+        </Background>
     )
 }
 

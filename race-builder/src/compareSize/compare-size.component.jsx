@@ -1,6 +1,7 @@
 import { CustomContext } from "../contexts/custom-race.context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Choice, StyledLink,Title, ChoiceContainer, Or, Background } from "../general-styles.styles";
 
 const CompareSize = () => {
 
@@ -17,12 +18,14 @@ const CompareSize = () => {
    
     
     return(
-        <div>
-            <h1>Make Your Choice Of Size</h1>
-            <h2 onClick={onClickSizeChoice1}><Link to='/speed'>{race1.size.desc}</Link></h2>
-            <p>OR</p>
-            <h2 onClick={onClickSizeChoice2}><Link to='/speed'>{race2.size.desc}</Link></h2>
-        </div>
+        <Background>
+            <Title>Make Your Choice Of Size</Title>
+            <ChoiceContainer>
+            <Choice onClick={onClickSizeChoice1}><StyledLink to='/speed'>{race1.size.desc}</StyledLink></Choice>
+            <Or>OR</Or>
+            <Choice onClick={onClickSizeChoice2}><StyledLink to='/speed'>{race2.size.desc}</StyledLink></Choice>
+            </ChoiceContainer>
+        </Background>
     )
 }
 

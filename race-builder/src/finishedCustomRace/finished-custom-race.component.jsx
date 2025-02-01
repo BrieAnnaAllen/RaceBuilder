@@ -3,6 +3,8 @@ import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
 import { BiracialNameTitle } from "./finished-custom-race.styles";
 
+import { Background } from "../general-styles.styles";
+
 
 const FinishedCustomRace = () => {
     const {customRace, race1, race2} = useContext(CustomContext);
@@ -15,11 +17,11 @@ const FinishedCustomRace = () => {
         if(key === "traits"){
           display.push(<h2>Traits</h2>);
           Object.keys(customRace[key]).forEach((key2) => {
-            display.push(<div id={`${key2}`} ><h3>{capitalFirstLetter(key2)}</h3><p>{customRace[key][key2].desc}</p></div>)
+            display.push(<div id={`${key2}`} color='red' ><h3>{capitalFirstLetter(key2)}</h3><p>{customRace[key][key2].desc}</p></div>)
           })
         }
         else {
-          display.push(<div id={`${key}`} ><h3>{capitalFirstLetter(key)}</h3><p>{customRace[key].desc}</p></div>)
+          display.push(<div id={`${key}`} color='blue'><h3>{capitalFirstLetter(key)}</h3><p>{customRace[key].desc}</p></div>)
         }
       });
       
@@ -33,6 +35,8 @@ const FinishedCustomRace = () => {
       var name = r1.split(' ') 
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
       .join(' ');
+
+      name += ' -'
 
       name += " " + (r2.split(' ') 
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
@@ -51,10 +55,10 @@ const FinishedCustomRace = () => {
     }
     
     return(
-        <div>
+        <Background>
           <BiracialNameTitle>{biracialName(race1.name, race2.name)} Traits</BiracialNameTitle>
           {displayCustomRace()}
-        </div>
+        </Background>
     )
 }
 

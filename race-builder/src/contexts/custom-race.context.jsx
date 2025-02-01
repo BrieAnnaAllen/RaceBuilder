@@ -6,7 +6,7 @@ export const CustomContext = createContext({
     customRace: {},
     balance: 0,
     raceTraits: {},
-    finished: false
+    finished: false,
 });
 
 

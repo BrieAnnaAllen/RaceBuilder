@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import backimg from '../images/crinkle-page.jpg';
 
 
-export const AgeTitle = styled.h1`
+export const Title = styled.h1`
     text-align: center;
-    font-family: 'Wizzta';
+    font-family: 'MainFont';
 `;
 
-export const AgeChoiceContainer = styled.div`
+export const ChoiceContainer = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
-   font-family: 'MountainKingRegular';
+   font-family: 'MainFont2';
 `;
 
 export const Or = styled.p`
     text-align: center;
+    font-weight: bold;
 `;
 
-export const AgeChoice = styled.h2`
+export const Choice = styled.h2`
     text-align: center;
    //font-family: 'MointainKingRegular';
 `
-export const AgeLink = styled(Link)`
+export const StyledLink = styled(Link)`
     text-decoration: none;
     color: black;
     &:hover {

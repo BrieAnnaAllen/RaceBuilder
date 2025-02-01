@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
 
-import { AgeTitle, AgeChoiceContainer, Or, AgeChoice, AgeLink, Background} from "./compare-age.styles";
+import { Choice, StyledLink,Title, ChoiceContainer, Or, Background } from "../general-styles.styles";
 
 
 const CompareAge= () => {
@@ -20,12 +20,12 @@ const CompareAge= () => {
     
     return(
         <Background>
-            <AgeTitle>Make Your Choice Of Age Range</AgeTitle>
-            <AgeChoiceContainer>
-                <AgeChoice onClick={onClickAgeChoice1}><AgeLink to='/size'>{race1.age.desc}</AgeLink></AgeChoice>
+            <Title>Choose Your Age Trait</Title>
+            <ChoiceContainer>
+                <Choice onClick={onClickAgeChoice1}><StyledLink to='/size'>{race1.age.desc}</StyledLink></Choice>
                 <Or>OR</Or>
-                <AgeChoice onClick={onClickAgeChoice2}><AgeLink to='/size'>{race2.age.desc}</AgeLink></AgeChoice>
-            </AgeChoiceContainer>
+                <Choice onClick={onClickAgeChoice2}><StyledLink to='/size'>{race2.age.desc}</StyledLink></Choice>
+            </ChoiceContainer>
         </Background>
     )
 }
