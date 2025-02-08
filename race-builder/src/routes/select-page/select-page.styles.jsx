@@ -60,9 +60,6 @@ export const SubmitButton = styled.button`
         border: 2px solid rgba(112, 77, 54, .1);
     }
     border: 2px solid rgba(112, 77, 54, .3);
-    
-   
-    
 `
 export const SubLink = styled(Link)`
    text-decoration: none;
