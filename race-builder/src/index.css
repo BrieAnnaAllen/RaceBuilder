@@ -8,7 +8,8 @@ body {
   /*background: radial-gradient(farthest-corner at 50% 50%, #ccad80 20%,#956a47,#704d36 );
   background-color: #ccad80;
   background-attachment: fixed;*/
-  background-image: url('../src/images/crinkle-page.jpg');
+  /*background-image: url('../src/images/crinkle-page.jpg');*/
+  background-color: #f2a9ca;
   font-size: 1px;
   height: 100%;
   

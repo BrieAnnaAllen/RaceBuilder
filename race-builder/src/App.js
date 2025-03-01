@@ -12,6 +12,7 @@ import CompareAbility from './compareAbilityScore/compare-ability-score.componen
 import CompareLanguage from './compareLanguage/compare-language.component';
 import CompareTraits from './compareTraits/compare-traits.component';
 import FinishedCustomRace from './finishedCustomRace/finished-custom-race.component';
+import Home from './routes/homepage/home.component';
 
 
 // https://docs.google.com/spreadsheets/d/1vq1kz6PRAbw5LHy6amH-bNb4OuB8DBXL1RsZROt03Sc/edit#gid=872807765
@@ -23,7 +24,8 @@ const App = () => {
 
   return (
     <Routes>
-      <Route index element={<SelectPage/>}></Route>
+      <Route index element={<Home/>}></Route>
+      <Route path="/select-page" element={<SelectPage/>}></Route>
       <Route path="/age" element={<CompareAge/>}></Route>
       <Route path="/size" element={<CompareSize/>}></Route>
       <Route path="/speed" element={<CompareSpeed/>}></Route>
