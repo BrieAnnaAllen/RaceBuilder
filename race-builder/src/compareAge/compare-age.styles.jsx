@@ -5,26 +5,26 @@ import backimg from '../images/crinkle-page.jpg';
 
 export const AgeTitle = styled.h1`
     text-align: center;
-    font-family: 'Wizzta';
-`;
-
+    font-family: 'FlyingBubble';
+`
 export const AgeChoiceContainer = styled.div`
    display: flex;
    flex-direction: column;
    justify-content: center;
-   font-family: 'MountainKingRegular';
+   
 `;
 
 export const Or = styled.p`
     text-align: center;
+    font-family: 'FlyingBubble', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `;
 
 export const AgeChoice = styled.h2`
     text-align: center;
-   //font-family: 'MointainKingRegular';
 `
 export const AgeLink = styled(Link)`
     text-decoration: none;
+    font-family: 'FlyingBubble', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: black;
     &:hover {
         color: orange;

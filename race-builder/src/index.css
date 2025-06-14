@@ -43,3 +43,44 @@ code {
   src: url('./fonts/NewRocker-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'CreamYoghurt';
+  src: url('./fonts/CreamYoghurt.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'FlyingBubble';
+  src: url('./fonts/FlyingBubble.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GameBubble';
+  src: url('./fonts/GameBubble.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Amorlate';
+  src: url('./fonts/Amorlate.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Wheetpaste';
+  src: url('./fonts/Wheetpaste-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Imperator';
+  src: url('./fonts/Imperator.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ImperatorBronze';
+  src: url('./fonts/ImperatorBronze.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ImperatorBronzeCap';
+  src: url('./fonts/ImperatorBronzeSmallCaps.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oldsh';
+  src: url('./fonts/OLDSH___.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Euphorigenic';
+  src: url('./fonts/Euphorigenic.otf') format('opentype');
+}

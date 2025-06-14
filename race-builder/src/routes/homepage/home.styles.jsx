@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Background = styled.div`
     background-color: #f2a9ca;
@@ -86,21 +87,33 @@ export const LogoAnimation = keyframes`
 
 export const EnterAnimation = keyframes`
     0%{
-        display: none;
+        text-align: center;
+        opacity: 0;
+        
+    }
+    30%{
+        text-align: center;
+        opacity: 0;
     }
     
     100%{
+        text-align: center;
         display: block;
+        opacity: 1;
+        color: #ab83c9;
     }
 `
-export const Enter = styled.p`
-    font-size: 10rem;
-    position: relative;
+export const Enter = styled(Link)`
+    text-align: center; 
+    animation-name: ${EnterAnimation};
+    opacity: 0;
     animation-duration: 2s;
-    transition: visibility 1s, opacity 1s;
-    visibility: hidden; 
-    opacity:0;
-
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    font-size: 10rem;
+    text-decoration: none;
+    font-family: 'FlyingBubble';
+   
 `
 export const Logo = styled.img`
     position: relative;

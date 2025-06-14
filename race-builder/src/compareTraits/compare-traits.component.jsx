@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { TraitsBackground, TraitsButtons} from "./compare-traits.styles";
+import { TraitsBackground, YesNoDiv, QuestionButton, Linky, TraitsButtons, BalanceScore, Paragraph, TraitButtonH2, TraitButtonP, H1Gen, FinalButton} from "./compare-traits.styles";
 import ReactDom from 'react-dom';
 
-var mainColor = 'white';
-var secondColor = 'red'
+var mainColor = 'pink';
+var secondColor = 'lightblue'
 
 var BUTTON_COLORS1 = {
     0: mainColor,
@@ -55,16 +55,16 @@ const CompareTraits = () => {
     const traitsHandler = (raceTraitsList, raceKey, isItRace1, i) => {
 
         if(isItRace1) {
-            if(BUTTON_COLORS1[`${i}`] === 'white') {
-                BUTTON_COLORS1[`${i}`] = 'blue';
+            if(BUTTON_COLORS1[`${i}`] === mainColor) {
+                BUTTON_COLORS1[`${i}`] = secondColor;
             }
-            else { BUTTON_COLORS1[`${i}`] = 'white'}
+            else { BUTTON_COLORS1[`${i}`] = mainColor}
         }
         else {
-            if(BUTTON_COLORS2[`${i}`] === 'white') {
-                BUTTON_COLORS2[`${i}`] = 'blue';
+            if(BUTTON_COLORS2[`${i}`] === mainColor) {
+                BUTTON_COLORS2[`${i}`] = secondColor;
             }
-            else { BUTTON_COLORS2[`${i}`] = 'white'}
+            else { BUTTON_COLORS2[`${i}`] = mainColor}
         }
        
         updateRaceTraits(raceKey, raceTraitsList[raceKey]);
@@ -92,7 +92,7 @@ const CompareTraits = () => {
         for(let i = 0; i < raceKeys.length; i++){
             
 
-            Tr.push(<TraitsButtons style={{backgroundColor: buttonColor(isItRace1, i)}} onClick={() => traitsHandler(traitsT, raceKeys[i], isItRace1, i)}><h2>{`${raceKeys[i]}`}</h2><p>{`${traitsT[raceKeys[i]].desc}`}</p></TraitsButtons>);
+            Tr.push(<TraitsButtons style={{backgroundColor: buttonColor(isItRace1, i)}} onClick={() => traitsHandler(traitsT, raceKeys[i], isItRace1, i)}><TraitButtonH2>{`${raceKeys[i]}`}</TraitButtonH2><TraitButtonP>{`${traitsT[raceKeys[i]].desc}`}</TraitButtonP></TraitsButtons>);
         }
 
         return Tr;
@@ -144,18 +144,23 @@ const CompareTraits = () => {
             <p>{customRace.speed.desc}</p>
             <h2>Languages</h2>
             <p>{customRace.languages.desc}</p> */}
-            <h1>Balance Score: {balance}</h1>
-            <h1>Race 1 Traits</h1>
+            <BalanceScore>Balance Score: {balance}</BalanceScore>
+            <Paragraph>Please Note: your balance score cannot go over 33. This is to keep your character fair and balanced in line with other d&d races. </Paragraph>
+            <H1Gen>{race1.name} Traits</H1Gen>
             {displayRaceTraits(race1)}
-            <h1>Race 2 Traits</h1>
+            <H1Gen>{race2.name} Traits</H1Gen>
             {displayRaceTraits(race2)}
+            <br></br>
            { finished ? (
             <div>
-                <p>Are You Sure?</p>
-                <button><Link to='/finished-custom-race'>Yes</Link></button>
-                <button onClick={() => toggleFinished()}>No</button>
+                <Paragraph>Are You Sure?</Paragraph>
+                <YesNoDiv>
+                <QuestionButton><Linky to='/finished-custom-race'>Yes</Linky></QuestionButton>
+                <QuestionButton onClick={() => toggleFinished()}>No</QuestionButton>
+                </YesNoDiv>
             </div>
-           ) : ( <button onClick={() => finalizationHandler() }>Finalize</button> ) }
+           ) : ( <FinalButton onClick={() => finalizationHandler() }>Finalize</FinalButton> ) }
+           <br></br>
         </TraitsBackground>
         
        

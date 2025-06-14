@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { CustomContext } from "../contexts/custom-race.context";
 import { Link } from "react-router-dom";
-import { BiracialNameTitle } from "./finished-custom-race.styles";
+import { BiracialNameTitle, Background, TraitContainer, TraitHeader, TraitDetails, TH2} from "./finished-custom-race.styles";
 
-import { Background } from "../general-styles.styles";
 
 
 const FinishedCustomRace = () => {
@@ -15,13 +14,13 @@ const FinishedCustomRace = () => {
         console.log("Girl are we even here fr");
 
         if(key === "traits"){
-          display.push(<h2>Traits</h2>);
+          display.push(<TH2>Traits</TH2>);
           Object.keys(customRace[key]).forEach((key2) => {
-            display.push(<div id={`${key2}`} color='red' ><h3>{capitalFirstLetter(key2)}</h3><p>{customRace[key][key2].desc}</p></div>)
+            display.push(<TraitContainer id={`${key2}`} color='red' ><TraitHeader>{capitalFirstLetter(key2)}</TraitHeader><TraitDetails>{customRace[key][key2].desc}</TraitDetails></TraitContainer>)
           })
         }
         else {
-          display.push(<div id={`${key}`} color='blue'><h3>{capitalFirstLetter(key)}</h3><p>{customRace[key].desc}</p></div>)
+          display.push(<TraitContainer id={`${key}`} color='blue'><TraitHeader>{capitalFirstLetter(key)}</TraitHeader><TraitDetails>{customRace[key].desc}</TraitDetails></TraitContainer>)
         }
       });
       

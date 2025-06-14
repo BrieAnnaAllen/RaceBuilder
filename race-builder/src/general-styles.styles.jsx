@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Title = styled.h1`
     text-align: center;
-    font-family: 'MainFont';
+    font-family: 'Euphorigenic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `;
 
 export const ChoiceContainer = styled.div`
@@ -17,17 +17,19 @@ export const ChoiceContainer = styled.div`
 export const Or = styled.p`
     text-align: center;
     font-weight: bold;
+    font-family: 'Oldsh', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 `;
 
 export const Choice = styled.h2`
     text-align: center;
+    font-family: 'Oldsh', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    //font-family: 'MointainKingRegular';
 `
 export const StyledLink = styled(Link)`
     text-decoration: none;
     color: black;
     &:hover {
-        color: orange;
+        color: purple;
     }
 `
 export const Background = styled.div`

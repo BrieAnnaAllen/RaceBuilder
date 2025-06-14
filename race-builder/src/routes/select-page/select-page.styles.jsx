@@ -29,7 +29,8 @@ export const OptGroup = styled.optgroup`
     -moz-appearance: none;
     -webkit-appearence: none;
     text-align: center;
-    background-color: #956a47;
+    background-color: #cbb9d9;
+    font-family: 'Amorlate', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
     
 `;
@@ -38,11 +39,12 @@ export const Option = styled.option`
     -webkit-appearance: none;
     -moz-appearance: none;
     text-align: center; 
+    font-family: 'CreamYoghurt', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: auto;
-    background-color: #ccad80;
+    background-color: #f1a9ca;
     background-attachment: fixed;
     &:hover{
-        background-color: #956a47;
+        background-color: #cbb9d9;
     }
     
    
@@ -54,12 +56,15 @@ export const SubmitButton = styled.button`
     border: none;
     font-size: 4rem;
     border-radius: 25px;
+    display: block;
+    min-width: 50%;
+    font-family: 'CreamYoghurt', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
     &:hover{
-        background-color: rgba(112, 77, 54, .1);
-        border: 2px solid rgba(112, 77, 54, .1);
+        background-color: rgba(117, 11, 59, 0.2);
+        border: 2px solid rgba(241, 169, 202, .1);
     }
-    border: 2px solid rgba(112, 77, 54, .3);
+    border: 2px solid  rgba(117, 11, 59, 0.2);
 `
 export const SubLink = styled(Link)`
    text-decoration: none;
@@ -72,6 +77,7 @@ export const SelectConfig = styled.select`
     background: transparent;
     border: none;
     font-size: 4rem;
+    font-family: 'CreamYoghurt', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: auto;
     :top{
         opacity: 20%;
@@ -79,11 +85,11 @@ export const SelectConfig = styled.select`
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 25px;
-    border: 2px solid rgba(112, 77, 54, .3);
+    border: 2px solid rgba(117, 11, 59, 0.2);
     
     &:hover{
-        background-color: rgba(112, 77, 54, .1);
-        border: 2px solid rgba(112, 77, 54, .1);
+        background-color: rgba(117, 11, 59, 0.2);
+        border: 2px solid rgba(241, 169, 202, .1);
     }
     
     /* &:hover ${OptGroup}{
@@ -102,8 +108,7 @@ export const SelectContainer = styled.div`
     align-items: center;
     min-height: 100%;
     min-width: 100%;
-    background-color: #956a47;
-    background: radial-gradient(farthest-corner at 50% 50%, #ccad80 20%,#956a47,#704d36 );
+    background: radial-gradient(farthest-corner at 50% 50%, #f1a9ca 20%,#cbb9d9,#f1a9ca );
     ::-webkit-scrollbar {
         display: none;
     }

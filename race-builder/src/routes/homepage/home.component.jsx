@@ -10,7 +10,7 @@ const Home = () => {
     return(
         <Background>
             <Logo src={bizzybrie}></Logo>
-            <Enter>Enter</Enter>
+            <Enter to="/select-page">Enter</Enter>
         </Background>
 
     )
