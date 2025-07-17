@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Background = styled.div`
    margin: 0 auto;
    font-size: 2rem;
+   text-align: center
 `
 export const BiracialNameTitle = styled.h1`
     font-family: 'Euphorigenic';
@@ -10,18 +11,22 @@ export const BiracialNameTitle = styled.h1`
 `
 
 export const TraitContainer = styled.div`
-    
+    min-width: 100%;
 `
 export const TraitHeader = styled.h3`
     margin-bottom: 0;
     font-family: 'Oldsh';
+    text-align: center
 
     
 `
 export const TraitDetails = styled.p`
     margin-top: 0;
     font-size: 1.5rem;
-    max-width: 75%;
+    text-align: center;
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
 `
 
 export const TH2 = styled.h2`

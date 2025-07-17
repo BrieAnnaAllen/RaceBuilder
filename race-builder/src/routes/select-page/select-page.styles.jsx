@@ -24,7 +24,13 @@ export const UnorderedListConfig = styled.ul`
 export const SubHeader = styled.ul`
     
 `
-
+export const Paragraph = styled.p`
+    font-size: 2.5rem;
+    max-width: 60%;
+    text-align: center;
+    font-family: 'Euphorigenic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+`
 export const OptGroup = styled.optgroup`
     -moz-appearance: none;
     -webkit-appearence: none;

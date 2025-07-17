@@ -23,6 +23,8 @@ export const Or = styled.p`
 export const Choice = styled.h2`
     text-align: center;
     font-family: 'Oldsh', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 30px;
+    margin-right: 30px;
    //font-family: 'MointainKingRegular';
 `
 export const StyledLink = styled(Link)`
@@ -38,6 +40,5 @@ export const Background = styled.div`
    flex-direction: column;
    justify-content: center;
     min-height: 100%;
-    min-width: 100%;
     font-size: 2rem;
 `

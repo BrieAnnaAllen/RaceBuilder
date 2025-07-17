@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { RacesContext } from '../../contexts/all-races.context';
 import { useRef } from 'react';
 import { CustomContext } from '../../contexts/custom-race.context';
-import { OptGroup, SelectConfig, SelectContainer, Option, SubmitButton, SubLink} from './select-page.styles';
+import { OptGroup, SelectConfig, SelectContainer, Option, SubmitButton, SubLink, Paragraph} from './select-page.styles';
 
 
 
@@ -61,6 +61,7 @@ const OptionCreation = () => {
 
   return (
     <SelectContainer>
+      <Paragraph>To begin, select each race your character is mixed with by clicking the rounded box for each race.  Once you are happy with your choices, click "Select" </Paragraph>
        <SelectConfig ref={select1}>
         {OptionCreation()}
           {/* {races.map((race) => <option key={race.id}>{race.name}</option>)} */}

@@ -84,3 +84,7 @@ code {
   font-family: 'Euphorigenic';
   src: url('./fonts/Euphorigenic.otf') format('opentype');
 }
+@font-face {
+  font-family: 'PleaseWriteMeASong';
+  src: url('./fonts/PleaseWriteMeASong-70vV.ttf') format('truetype');
+}
